@@ -1,67 +1,55 @@
-/* Universal selection */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
 .hero__section{
-    background-image:url(./images/heroSectionBackground.png);
+    background-image: url(images/heroSectionBackground.png);
     background-size: cover;
     background-position: center;
     /* background-repeat: no-repeat; */
-    color: aqua;
+    color: white;
     min-height: 60vh;
 }
 
-.navbar {
-    /* padding: 16px for top n bottom, 40px for right n left */
+.navbar{
     padding: 16px 40px;
-    /* flex */
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    align-items: center;
+    height: 60px;
 }
-
-/* descendant selector */
 .navbar a{
-    font-size: small;
     color: white;
     text-decoration: none;
 }
 
-.navbar .navbar__menu_container{
-     display: flex;
-     gap: 40px;
+.navbar__menu_container {
+    display: flex;
+    gap: 20px;
 }
 
-/* .navbar__menu_container .user__icon{
+.navbar__menu_container .user__icon{
     height: 25px;
     width: 25px;
-    border: 1px;
-    border-radius: 100%;
-    border-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-.navbar__menu_container.user__icon{
-    height: 25px;
-    width: 25px;
-    border: 1px;
-    border-radius: 100%;
-    border-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     display: none;
 }
 
+/* media queires */
 @media only screen and (max-width: 600px){
-    .navbar__menu_container.user__icon{
+    .navbar__menu_container .user__icon{
         display: flex;
     }
-};
-
+    .link{
+        display: none;
+    }
+    .hero__section{
+        min-height: 80vh;
+    }
+}
